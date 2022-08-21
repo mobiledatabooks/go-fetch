@@ -16,6 +16,9 @@ func Fetch(url string) { // Fetch prints the content found at a URL.
 		fmt.Fprintf(os.Stderr, "fetch: %v\n", err) // print error to stderr
 		os.Exit(1)                                 // exit with error code 1 (error)
 	}
+
+	fmt.Println("HTTP status:", resp.Status)
+
 	b, err := io.Copy(os.Stdout, resp.Body) // copy the body of the response to the stdout and return the number of bytes copied and an error (if there is one)
 	resp.Body.Close()                       // close the body of the response (don't leak resources)
 	if err != nil {                         // if there is an error, print it and return immediately

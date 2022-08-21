@@ -17,6 +17,7 @@ func FetchConcurrent(url string, ch chan<- string) { // Fetch prints the content
 		ch <- fmt.Sprint(err) // send to channel ch the error message
 		return                // return immediately
 	}
+	fmt.Println("HTTP status:", resp.Status)
 
 	nbytes, err := io.Copy(ioutil.Discard, resp.Body) // copy the body of the response to the ioutil.Discard writer (discard everything) and return the number of bytes copied and an error
 	resp.Body.Close()                                 //  close the body of the response (don't leak resources)
