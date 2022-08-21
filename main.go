@@ -3,8 +3,10 @@ package main
 import (
 	"os"
 
-	"mobiledatabooks.com/fetcher"
+	"github.com/mobiledatabooks/go-fetch/fetcher"
 )
+
+// https://github.com/mobiledatabooks/go-fetch.git
 
 // go run main.go https://golang.org http://gopl.io https://godoc.org
 

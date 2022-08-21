@@ -2,6 +2,6 @@ module mobiledatabooks.com/example
 
 go 1.19
 
-replace mobiledatabooks.com/fetcher => ./fetcher
+replace github.com/mobiledatabooks/go-fetch/fetcher => ./fetcher
 
-require mobiledatabooks.com/fetcher v0.0.0-00010101000000-000000000000
+require github.com/mobiledatabooks/go-fetch/fetcher v0.0.0-00010101000000-000000000000
