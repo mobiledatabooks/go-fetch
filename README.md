@@ -10,5 +10,6 @@ io.ReadAll reads from r until an error or EOF and returns the data it read. A su
 Starts with 512 bytes buffer and adds more capacity if needed.
 
 Fetch
+The io.Copy function reads from a source (src) and writes to a destination (dst) until either EOF is reached on src or an error occurs. It returns the number of bytes copied and the first error encountered while copying, if any.
 
-The io.Copy function reads from a source (src) and writes to a destination (dst). It can be used instead of io.ReadAll to copy the response body to os.Stdout without requiring a buffer large enough to hold the entire stream. Be sure to check the error result of io.Copy.
+It can be used instead of io.ReadAll to copy the response body to os.Stdout without requiring a buffer large enough to hold the entire stream. 
