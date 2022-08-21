@@ -12,7 +12,7 @@ import (
 
 func main() { // Fetch prints the content found at each specified URL.
 	for _, url := range os.Args[1:] { // for each URL in the command line arguments
-		fetcher.FetchWithBuffer(url) // fetch the URL and print the content
+		fetcher.FetchWithBuffer(url) //  fetch the URL and print the content (with buffer)
 	}
 }
 
