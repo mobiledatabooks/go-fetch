@@ -10,7 +10,7 @@ import (
 
 //!+
 
-func Fetch(url string) { // Fetch prints the content found at a URL.
+func FetchWithBuffer(url string) { // Fetch prints the content found at a URL.
 	resp, err := http.Get(url) // make an HTTP get request to the given URL
 	if err != nil {            // if there is an error, print it and return  immediately
 		fmt.Fprintf(os.Stderr, "fetch: %v\n", err) // print error to stderr
