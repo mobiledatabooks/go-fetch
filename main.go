@@ -10,9 +10,9 @@ import (
 
 // go run main.go https://golang.org http://gopl.io https://godoc.org
 
-func main() {
-	for _, url := range os.Args[1:] {
-		fetcher.Fetch(url)
+func main() { // Fetch prints the content found at each specified URL.
+	for _, url := range os.Args[1:] { // for each URL in the command line arguments
+		fetcher.Fetch(url) // fetch the URL and print the content
 	}
 }
 
